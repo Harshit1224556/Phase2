@@ -3,7 +3,7 @@ import { useBudget } from '../context/Budgetcontext'
 import './Transaction.css'
 
 function Transaction() {
-  const { expense, setexpense } = useBudget()
+  const { expense } = useBudget()
 
   return (
     <div className="transaction-wrapper">

@@ -6,7 +6,7 @@ function Budget() {
     const [desc,setdesc] = useState("")
     const [catg,setcatg] = useState("")
     const[exact,setexact] = useState("")
-    const {expense,setexpense} = useBudget()
+    const {expense,setexpense,saveExpense} = useBudget()
 
      console.log(expense)
     function handlesubmit(e){
@@ -17,8 +17,8 @@ function Budget() {
         catg,
         exact
       }
-      
-      setexpense(prev=>[...prev,newobj])
+      const updated = [...expense,newobj]
+      saveExpense(updated)
      
     }
   return (
