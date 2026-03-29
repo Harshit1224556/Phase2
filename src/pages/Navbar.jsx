@@ -17,6 +17,9 @@ function Navbar() {
           <NavLink to="/budget" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
             Budget
           </NavLink>
+          <NavLink to="/transcation" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+            Transcation
+          </NavLink>
         </div>
       </nav>
     </div>

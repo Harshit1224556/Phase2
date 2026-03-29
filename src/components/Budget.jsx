@@ -24,7 +24,7 @@ function Budget() {
   return (
     <div className="budget-wrapper">
       <div className="budget-card">
-        <h2>Add budget</h2>
+        <h2>Add Expenses</h2>
         <form className="budget-form" onSubmit={handlesubmit}>
           <input type="text" placeholder="Description of Expenses"
           onChange={(e)=>setdesc(e.target.value)}  value={desc}/>
