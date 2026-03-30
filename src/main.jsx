@@ -1,15 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import {Budgetcontext} from './context/Budgetcontext.jsx'
+import Expensecontext from './context/Expensecontext'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
    <Budgetcontext>
+    <Expensecontext>
     <App />
+    </Expensecontext>
    </Budgetcontext>
    </BrowserRouter>
     

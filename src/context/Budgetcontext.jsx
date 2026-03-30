@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-const Budgetcontex = createContext()
+export const Budgetcontex = createContext()
 export function Budgetcontext({children}) {
     const[expense,setexpense] = useState([])
-     async function loadexpenses() {
+      function loadexpenses() {
        
       try{
-            const r = await localStorage.getItem("expenses")
+            const r =  localStorage.getItem("expenses")
             if(r){
               const data = JSON.parse(r)
               setexpense(data)

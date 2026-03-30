@@ -5,10 +5,10 @@ function Budget() {
 
     const [desc,setdesc] = useState("")
     const [catg,setcatg] = useState("")
-    const[exact,setexact] = useState("")
+    const[exact,setexact] = useState(0)
     const {expense,setexpense,saveExpense} = useBudget()
+    
 
-     console.log(expense)
     function handlesubmit(e){
       e.preventDefault();
      console.log("Hello jee")
@@ -38,8 +38,7 @@ function Budget() {
             <option value="ebill">E-Bill</option>
           </select>
 
-          <input type="number" placeholder="Enter the expenses"  onChange={(e)=>setexact(e.target.value)} value={exact}/>
-           
+          <input type="number" placeholder="Enter the expenses"  onChange={(e)=>setexact(Number(e.target.value))} value={exact}/>
           <button type ="submit">Add</button>
           
         </form>
